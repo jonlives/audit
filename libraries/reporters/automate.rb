@@ -12,10 +12,15 @@ module Reporter
     def initialize(opts)
       @entity_uuid = opts[:entity_uuid]
       @run_id = opts[:run_id]
+      @chef_server = opts[:chef_server_fqdn]
+      @organization = opts[:organization_name]
       @node_name = opts[:node_info][:node]
       @environment = opts[:node_info][:environment]
       @roles = opts[:node_info][:roles]
       @recipes = opts[:node_info][:recipes]
+      @chef_tags = opts[:node_info][:normal][:tags]
+      @policy_group = opts[:node_info][:policy_group]
+      @policy_name = opts[:node_info][:policy_name]
       @insecure = opts[:insecure]
 
       if defined?(Chef) &&
