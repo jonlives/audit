@@ -9,14 +9,19 @@ module Reporter
   #
   class ChefServerAutomate < ChefAutomate
     def initialize(opts)
-      @entity_uuid = opts[:entity_uuid]
-      @run_id = opts[:run_id]
-      @node_name = opts[:node_info][:node]
-      @insecure = opts[:insecure]
-      @environment = opts[:node_info][:environment]
-      @roles = opts[:node_info][:roles]
-      @recipes = opts[:node_info][:recipes]
-      @url = opts[:url]
+      @entity_uuid       = opts[:entity_uuid]
+      @run_id            = opts[:run_id]
+      @node_name         = opts[:node_info][:node]
+      @insecure          = opts[:insecure]
+      @environment       = opts[:node_info][:environment]
+      @roles             = opts[:node_info][:roles]
+      @recipes           = opts[:node_info][:recipes]
+      @url               = opts[:url]
+      @tags              = opts[:node_info][:tags]
+      @policy_group      = opts[:node_info][:policy_group]
+      @policy_name       = opts[:node_info][:policy_name]
+      @source_fqdn       = opts[:node_info][:source_fqdn]
+      @organization_name  = opts[:node_info][:organization_name]
     end
 
     def send_report(report)

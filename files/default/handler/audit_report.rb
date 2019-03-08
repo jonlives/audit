@@ -209,6 +209,11 @@ class Chef
           environment: n.environment,
           roles: runlist_roles,
           recipes: runlist_recipes,
+          policy_name: node.policy_name || '',
+          policy_group: node.policy_group || '',
+          tags: node.tags,
+          organization_name: chef_server_uri.path.split('/').last || '',
+          source_fqdn: chef_server_uri.host || '',
         }
       end
 
