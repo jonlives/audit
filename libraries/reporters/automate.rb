@@ -22,6 +22,8 @@ module Reporter
       @policy_name       = opts[:node_info][:policy_name]
       @source_fqdn       = opts[:node_info][:source_fqdn]
       @organization_name = opts[:node_info][:organization_name]
+      @ipaddress         = opts[:node_info][:ipaddress]
+      @fqdn              = opts[:node_info][:fqdn]
 
       if defined?(Chef) &&
          defined?(Chef::Config) &&
@@ -115,6 +117,8 @@ module Reporter
       final_report[:policy_group]      = @policy_group
       final_report[:policy_name]       = @policy_name
       final_report[:tags]              = @tags
+      final_report[:ipaddress]         = @ipaddress
+      final_report[:fqdn]              = @fqdn
 
       final_report
     end

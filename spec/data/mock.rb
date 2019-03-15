@@ -8,7 +8,9 @@ class MockData
       policy_group: 'test_policy_group',
       tags: ['mylinux', 'my.tag', 'some=tag'],
       organization_name: 'test_org',
-      source_fqdn: 'api.chef.io'
+      source_fqdn: 'api.chef.io',
+      ipaddress: '192.168.56.33',
+      fqdn: 'lb1.prod.example.com'
     }
   end
 

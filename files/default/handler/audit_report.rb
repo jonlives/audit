@@ -214,6 +214,8 @@ class Chef
           tags: node.tags,
           organization_name: chef_server_uri.path.split('/').last || '',
           source_fqdn: chef_server_uri.host || '',
+          ipaddress: n['ipaddress'],
+          fqdn: n['fqdn'],
         }
       end
 

@@ -61,6 +61,8 @@ describe 'Reporter::ChefServerAutomate methods' do
                                   "policy_group": "test_policy_group",
                                   "policy_name": "test_policy_name",
                                   "tags": ["mylinux", "my.tag", "some=tag"],
+                                  "ipaddress": "192.168.56.33",
+                                  "fqdn": "lb1.prod.example.com",
       }
 
     opts = {

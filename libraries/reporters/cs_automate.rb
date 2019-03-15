@@ -22,6 +22,8 @@ module Reporter
       @policy_name       = opts[:node_info][:policy_name]
       @source_fqdn       = opts[:node_info][:source_fqdn]
       @organization_name  = opts[:node_info][:organization_name]
+      @ipaddress         = opts[:node_info][:ipaddress]
+      @fqdn              = opts[:node_info][:fqdn]
     end
 
     def send_report(report)
