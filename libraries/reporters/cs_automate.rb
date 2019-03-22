@@ -17,7 +17,7 @@ module Reporter
       @roles             = opts[:node_info][:roles]
       @recipes           = opts[:node_info][:recipes]
       @url               = opts[:url]
-      @tags              = opts[:node_info][:tags]
+      @chef_tags         = opts[:node_info][:chef_tags]
       @policy_group      = opts[:node_info][:policy_group]
       @policy_name       = opts[:node_info][:policy_name]
       @source_fqdn       = opts[:node_info][:source_fqdn]
